@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="public/scissors.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>RPS</title>
+  </head>
+  <body>
+    <nav class="container">
+      <h1>ROCK, PAPER, SCISSORS...</h1>
+      <div>
+        <button id="reset">NEW GAME</button>
+      </div>
+    </nav>
+
+    <main class="container">
+      <div class="score">
+        <h2>LEFT: <span id="left-score">0</span></h2>
+        <h2>RIGHT: <span id="right-score">0</span></h2>
+      </div>
+
+      <div class="game">
+        <div class="action">
+          <div class="info">
+            <h2>ROUND #<span id="round-number">1</span></h2>
+            <!-- <p><span id="whos-turn">Left</span>'s turn</p> -->
+            <img id="arrow" class="" src="public/arrow.svg" alt="">
+          </div>
+          <div class="choices">
+            <img id="left-choice" src="" alt="left" />
+            <img id="right-choice" src="" alt="right" />
+          </div>
+        </div>
+
+        <div class="log">
+          <p>> <span id="message">Select an option below to start the game...</span></p>
+        </div>
+
+        <div class="select">
+          <div class="left-select">
+            <button id="left-rock">ROCK</button>
+            <button id="left-paper">PAPER</button>
+            <button id="left-scissors">SCISSORS</button>
+          </div>
+          <div class="right-select">
+            <button id="right-rock" disabled>ROCK</button>
+            <button id="right-paper" disabled>PAPER</button>
+            <button id="right-scissors" disabled>SCISSORS</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

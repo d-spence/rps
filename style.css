@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --primary-color: #555;
+  --secondary-color: #2c3664;
+  --dark-color: #333;
+  --light-color: #fff;
+  --bg1-color: #fdfdfd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg1-color);
+  font-family: 'Lato', sans-serif;
+  color: var(--dark-color);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--dark-color);
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+}
+
+nav button {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  font-size: 1rem;
+  font-weight: 300;
+  border: 1px solid var(--dark-color);
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+nav button:where(:hover) {
+  background-color: #eee;
+}
+
+main {
+  width: 100%;
+}
+
+.container {
+  max-width: 996px;
+  margin: 0 auto;
+}
+
+.score {
+  display: flex;
+  justify-content: space-around;
+}
+
+.score h2 {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  font-size: 1.5rem;
+  font-weight: 300;
+  border: 1px solid var(--dark-color);
+  padding: 4px 8px;
+}
+
+.score h2 span {
+  font-weight: 700;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+}
+
+.game .action {
+  position: relative;
+  border: 1px solid var(--dark-color);
+  height: 300px;
+}
+
+.game .action .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.game .action .info h2,
+.game .action .info p {
+  text-align: center;
+  margin: 0;
+}
+
+.game .action .info img {
+  margin-top: 80px;
+  transition: transform 0.5s;
+  transform-origin: center center;
+}
+
+.game .action .info img.left {
+  transform: rotate(90deg);
+}
+
+.game .action .info img.right {
+  transform: rotate(-90deg);
+}
+
+.game .action .choices {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.game .action .choices img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  padding: 20px;
+}
+
+.game .log {
+  border-left: 1px solid var(--dark-color);
+  border-right: 1px solid var(--dark-color);
+  border-bottom: 1px solid var(--dark-color);
+}
+
+.game .log p {
+  margin: 5px;
+}
+
+.game .select {
+  display: flex;
+  justify-content: space-around;
+}
+
+.game .left-select,
+.game .right-select {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--dark-color);
+  border-top: none;
+  padding: 20px;
+}
+
+.game .left-select {
+  border-right: none;
+}
+
+.game .left-select button,
+.game .right-select button {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  font-size: 2rem;
+  font-weight: 300;
+  border: 1px solid var(--dark-color);
+  margin: 5px 0;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.game .left-select button:where(:hover, :focus),
+.game .right-select button:where(:hover, :focus) {
+  background-color: #eee;
+}
+
+.game .left-select button:where(:disabled),
+.game .right-select button:where(:disabled) {
+  background-color: var(--bg1-color);
+  color: #ddd;
+  cursor: not-allowed;
+}
